@@ -1,18 +1,5 @@
 # Chirpy
 
-<!--toc:start-->
-- [Chirpy](#chirpy)
-  - [API](#api)
-    - [Users](#users)
-      - [POST /api/users](#post-apiusers)
-      - [PUT /api/users](#put-apiusers)
-      - [POST /api/login](#post-apilogin)
-    - [Posts (Chirps)](#posts-chirps)
-      - [GET /api/chirps?author_id={id}?sort=asc|desc](#get-apichirpsauthorididsortascdesc)
-      - [GET /api/chirps/{id}](#get-apichirpsid)
-      - [POST /api/chirps](#post-apichirps)
-<!--toc:end-->
-
 Chirpy is a simple blog engine written in Go:
 
 - It allows storing users and their posts using a REST API.
@@ -23,6 +10,17 @@ Chirpy is a simple blog engine written in Go:
 - Handle 'Polka' Webhook with authorization.
 
 ## API
+
+<!--toc:start-->
+- [Users](#users)
+  - [POST /api/users](#post-apiusers)
+  - [PUT /api/users](#put-apiusers)
+  - [POST /api/login](#post-apilogin)
+- [Posts (Chirps)](#posts-chirps)
+  - [GET /api/chirps?author_id={id}?sort=asc|desc](#get-apichirpsauthorididsortascdesc)
+  - [GET /api/chirps/{id}](#get-apichirpsid)
+  - [POST /api/chirps](#post-apichirps)
+  <!--toc:end-->
 
 ### Users
 
