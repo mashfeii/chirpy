@@ -1,0 +1,71 @@
+run:
+  tests: true
+  timeout: 5m
+linters:
+  disable-all: true
+  enable:
+    - bodyclose
+    - dogsled
+    - dupl
+    - errcheck
+    - exhaustive
+    - funlen
+    - gochecknoinits
+    - goconst
+    - gocritic
+    - gocyclo
+    - gofmt
+    - goimports
+    - revive
+    - goprintffuncname
+    - gosec
+    - gosimple
+    - govet
+    - ineffassign
+    - lll
+    - misspell
+    - nakedret
+    - nolintlint
+    - rowserrcheck
+    - copyloopvar
+    - staticcheck
+    - stylecheck
+    - typecheck
+    - unconvert
+    - unparam
+    - unused
+    - whitespace
+    - asciicheck
+    - gocognit
+    - godot
+    - nestif
+    - prealloc
+    - testpackage
+    - wsl
+linters-settings:
+  lll:
+    line-length: 140
+  funlen:
+    lines: 70
+    statements: 50
+  goimports:
+    local-prefixes: github.com/mashfeii/gator
+  gocritic:
+    enabled-tags:
+      - style
+      - experimental
+      - performance
+      - diagnostic
+      - opinionated
+
+issues:
+  exclude-rules:
+    - path: "_test.go"
+      linters:
+        - funlen
+        - dupl
+
+    - path: "_test.go"
+      linters:
+        - gocritic
+      text: 'hugeParam\: \S+ is heavy \(\d+ bytes\)\; consider passing it by pointer'
